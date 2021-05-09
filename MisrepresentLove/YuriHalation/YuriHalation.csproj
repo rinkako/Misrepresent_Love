@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB704EFC-BD27-4422-A61E-E7EBB9370577}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yuri.YuriHalation</RootNamespace>
+    <AssemblyName>YuriHalation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>HalaIco2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAudio, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Command\EditBGMCommand.cs" />
+    <Compile Include="Command\EditBgCommand.cs" />
+    <Compile Include="Command\EditDeletestandCommand.cs" />
+    <Compile Include="Command\EditDeletepicCommand.cs" />
+    <Compile Include="Command\EditDeletebuttonCommand.cs" />
+    <Compile Include="Command\EditButtonCommand.cs" />
+    <Compile Include="Command\EditACommand.cs" />
+    <Compile Include="Command\EditDialogCommand.cs" />
+    <Compile Include="Command\EditFuncallCommand.cs" />
+    <Compile Include="Command\HalationSingleEditCommand.cs" />
+    <Compile Include="Command\EditIfCommand.cs" />
+    <Compile Include="Command\IfCommand.cs" />
+    <Compile Include="Command\EditNotationCommand.cs" />
+    <Compile Include="Command\EditPictureCommand.cs" />
+    <Compile Include="Command\EditMoveCommand.cs" />
+    <Compile Include="Command\EditLabelCommand.cs" />
+    <Compile Include="Command\EditJumpCommand.cs" />
+    <Compile Include="Command\EditSCameraCommand.cs" />
+    <Compile Include="Command\ShutdownCommand.cs" />
+    <Compile Include="Command\SCameraCommand.cs" />
+    <Compile Include="Command\EditScriptCommand.cs" />
+    <Compile Include="Command\EditVarCommand.cs" />
+    <Compile Include="Command\EditSwitchCommand.cs" />
+    <Compile Include="Command\SaveCommand.cs" />
+    <Compile Include="Command\LoadCommand.cs" />
+    <Compile Include="Command\TitleCommand.cs" />
+    <Compile Include="Command\VarCommand.cs" />
+    <Compile Include="Command\FuncallCommand.cs" />
+    <Compile Include="Command\MenuPasteCommand.cs" />
+    <Compile Include="Command\MenuCutCommand.cs" />
+    <Compile Include="Command\MenuDeleteCommand.cs" />
+    <Compile Include="Command\PictureCommand.cs" />
+    <Compile Include="Command\ButtonCommand.cs" />
+    <Compile Include="Command\CstandCommand.cs" />
+    <Compile Include="Command\BgCommand.cs" />
+    <Compile Include="Command\MoveCommand.cs" />
+    <Compile Include="Command\ACommand.cs" />
+    <Compile Include="Command\DeletebuttonCommand.cs" />
+    <Compile Include="Command\DeletestandCommand.cs" />
+    <Compile Include="Command\DeletepicCommand.cs" />
+    <Compile Include="Command\TransCommand.cs" />
+    <Compile Include="Command\ScriptCommand.cs" />
+    <Compile Include="Command\ForCommand.cs" />
+    <Compile Include="Command\EditWaitCommand.cs" />
+    <Compile Include="Command\EditVocalCommand.cs" />
+    <Compile Include="Command\WaitCommand.cs" />
+    <Compile Include="Command\WaitaniCommand.cs" />
+    <Compile Include="Command\WaituserCommand.cs" />
+    <Compile Include="Command\ReturnCommand.cs" />
+    <Compile Include="Command\NotationCommand.cs" />
+    <Compile Include="Command\JumpCommand.cs" />
+    <Compile Include="Command\BreakCommand.cs" />
+    <Compile Include="Command\SwitchCommand.cs" />
+    <Compile Include="Command\LabelCommand.cs" />
+    <Compile Include="Command\VocalCommand.cs" />
+    <Compile Include="Command\SECommand.cs" />
+    <Compile Include="Command\BGSCommand.cs" />
+    <Compile Include="Command\BGMCommand.cs" />
+    <Compile Include="Command\BranchCommand.cs" />
+    <Compile Include="Command\DialogCommand.cs" />
+    <Compile Include="Command\DrawCommand.cs" />
+    <Compile Include="Command\HalationInvoker.cs" />
+    <Compile Include="Command\HalationViewCommand.cs" />
+    <Compile Include="Command\IHalationCommand.cs" />
+    <Compile Include="Command\HalationSingleCommand.cs" />
+    <Compile Include="Command\MsgLayerCommand.cs" />
+    <Compile Include="Command\MsgLayerOptCommand.cs" />
+    <Compile Include="Command\StopBGSCommand.cs" />
+    <Compile Include="Command\StopBGMCommand.cs" />
+    <Compile Include="Halation.cs" />
+    <Compile Include="HalationCore\CodeGenerator.cs" />
+    <Compile Include="HalationCore\FileManager.cs" />
+    <Compile Include="HalationCore\Musician.cs" />
+    <Compile Include="HalationCore\NAudioPlayer.cs" />
+    <Compile Include="HalationCore\PackageUtils.cs" />
+    <Compile Include="ScriptPackage\ActionPackage.cs" />
+    <Compile Include="ScriptPackage\ArgumentPackage.cs" />
+    <Compile Include="ScriptPackage\ConfigPackage.cs" />
+    <Compile Include="ScriptPackage\FunctionPackage.cs" />
+    <Compile Include="ScriptPackage\ProjectPackage.cs" />
+    <Compile Include="ScriptPackage\RunnablePackage.cs" />
+    <Compile Include="ScriptPackage\ScenePackage.cs" />
+    <Compile Include="ScriptPackage\VariablePackage.cs" />
+    <Compile Include="YuriForms\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\AddFuncForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\AddFuncForm.Designer.cs">
+      <DependentUpon>AddFuncForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\AddSceneForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\AddSceneForm.Designer.cs">
+      <DependentUpon>AddSceneForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\BgForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\BgForm.Designer.cs">
+      <DependentUpon>BgForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\BranchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\BranchForm.Designer.cs">
+      <DependentUpon>BranchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\ButtonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\ButtonForm.Designer.cs">
+      <DependentUpon>ButtonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\CStandForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\CStandForm.Designer.cs">
+      <DependentUpon>CStandForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\DebugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\DebugForm.Designer.cs">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\DrawStringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\DrawStringForm.Designer.cs">
+      <DependentUpon>DrawStringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\FunctionCallForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\FunctionCallForm.Designer.cs">
+      <DependentUpon>FunctionCallForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\GlobalConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\GlobalConfigForm.Designer.cs">
+      <DependentUpon>GlobalConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\IfForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\IfForm.Designer.cs">
+      <DependentUpon>IfForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\MoveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\MoveForm.Designer.cs">
+      <DependentUpon>MoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\MsgLayerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\MsgLayerForm.Designer.cs">
+      <DependentUpon>MsgLayerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\MsgLayerOptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\MsgLayerOptForm.Designer.cs">
+      <DependentUpon>MsgLayerOptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\MusicForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\MusicForm.Designer.cs">
+      <DependentUpon>MusicForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\NewProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\NewProjectForm.Designer.cs">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\NotationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\NotationForm.Designer.cs">
+      <DependentUpon>NotationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\PicResourceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\PicResourceForm.Designer.cs">
+      <DependentUpon>PicResourceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\PicturesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\PicturesForm.Designer.cs">
+      <DependentUpon>PicturesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\SCamera3DForm.xaml.cs">
+      <DependentUpon>SCamera3DForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\SCameraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\SCameraForm.Designer.cs">
+      <DependentUpon>SCameraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\Stage3D.xaml.cs">
+      <DependentUpon>Stage3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\SwitchesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\SwitchesForm.Designer.cs">
+      <DependentUpon>SwitchesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\TransForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\TransForm.Designer.cs">
+      <DependentUpon>TransForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\UserPackerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\UserPackerForm.Designer.cs">
+      <DependentUpon>UserPackerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\VarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\VarForm.Designer.cs">
+      <DependentUpon>VarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\VocalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\VocalForm.Designer.cs">
+      <DependentUpon>VocalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\WaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\WaitForm.Designer.cs">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="YuriForms\AForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\AForm.Designer.cs">
+      <DependentUpon>AForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\DeleteViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\DeleteViewForm.Designer.cs">
+      <DependentUpon>DeleteViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\DialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\DialogForm.Designer.cs">
+      <DependentUpon>DialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\JumpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\JumpForm.Designer.cs">
+      <DependentUpon>JumpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\LabelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\LabelForm.Designer.cs">
+      <DependentUpon>LabelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YuriForms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuriForms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="YuriForms\AboutWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="YuriForms\SCamera3DForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="YuriForms\Stage3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="YuriForms\AddFuncForm.resx">
+      <DependentUpon>AddFuncForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\AddSceneForm.resx">
+      <DependentUpon>AddSceneForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\AForm.resx">
+      <DependentUpon>AForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\BgForm.resx">
+      <DependentUpon>BgForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\BranchForm.resx">
+      <DependentUpon>BranchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\ButtonForm.resx">
+      <DependentUpon>ButtonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\CStandForm.resx">
+      <DependentUpon>CStandForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\DebugForm.resx">
+      <DependentUpon>DebugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\DeleteViewForm.resx">
+      <DependentUpon>DeleteViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\DialogForm.resx">
+      <DependentUpon>DialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\DrawStringForm.resx">
+      <DependentUpon>DrawStringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\FunctionCallForm.resx">
+      <DependentUpon>FunctionCallForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\GlobalConfigForm.resx">
+      <DependentUpon>GlobalConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\IfForm.resx">
+      <DependentUpon>IfForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\JumpForm.resx">
+      <DependentUpon>JumpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\LabelForm.resx">
+      <DependentUpon>LabelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\MoveForm.resx">
+      <DependentUpon>MoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\MsgLayerForm.resx">
+      <DependentUpon>MsgLayerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\MsgLayerOptForm.resx">
+      <DependentUpon>MsgLayerOptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\MusicForm.resx">
+      <DependentUpon>MusicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\NotationForm.resx">
+      <DependentUpon>NotationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\PicResourceForm.resx">
+      <DependentUpon>PicResourceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\PicturesForm.resx">
+      <DependentUpon>PicturesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\SCameraForm.resx">
+      <DependentUpon>SCameraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\SwitchesForm.resx">
+      <DependentUpon>SwitchesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\TransForm.resx">
+      <DependentUpon>TransForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\UserPackerForm.resx">
+      <DependentUpon>UserPackerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\VarForm.resx">
+      <DependentUpon>VarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\VocalForm.resx">
+      <DependentUpon>VocalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuriForms\WaitForm.resx">
+      <DependentUpon>WaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YuriInterpreter\YuriInterpreter.csproj">
+      <Project>{6194a2aa-1c9d-40cd-8c8f-ea66f679cc0f}</Project>
+      <Name>YuriInterpreter</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ScrPartition.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="HalaIco2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\HalaIco2.ico" />
+    <Resource Include="Assets\Logo_HA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\AboutHalation.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

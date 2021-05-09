@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D513CF82-CCCE-4D15-8F34-D17663C26FA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yuri</RootNamespace>
+    <AssemblyName>Yuri</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Yuri.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExtraContext\BookBMazeC.cs" />
+    <Compile Include="ExtraContext\BookBMazeB.cs" />
+    <Compile Include="ExtraContext\BookAMazeB.cs" />
+    <Compile Include="ExtraContext\BookBMazeA.cs" />
+    <Compile Include="ExtraContext\BookAMazeA.cs" />
+    <Compile Include="ExtraContext\InterludePartB.cs" />
+    <Compile Include="ExtraContext\InterludePartA.cs" />
+    <Compile Include="ExtraContext\StoryBookContext.cs" />
+    <Compile Include="ExtraContext\TracebackPartA.cs" />
+    <Compile Include="ExtraContext\TracebackAnother.cs" />
+    <Compile Include="ExtraContext\TracebackPartB.cs" />
+    <Compile Include="ExtraContext\TracebackPartC.cs" />
+    <Compile Include="PageView\ArtPage.xaml.cs">
+      <DependentUpon>ArtPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\ILoadablePage.cs" />
+    <Compile Include="PageView\LHEndListPage.xaml.cs">
+      <DependentUpon>LHEndListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LHPage.xaml.cs">
+      <DependentUpon>LHPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LHSaveLoadPage.xaml.cs">
+      <DependentUpon>LHSaveLoadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LHSettingsPage.xaml.cs">
+      <DependentUpon>LHSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LHStartPage.xaml.cs">
+      <DependentUpon>LHStartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\MessagePage.xaml.cs">
+      <DependentUpon>MessagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\MusicPage.xaml.cs">
+      <DependentUpon>MusicPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\RenderablePage.cs" />
+    <Compile Include="PageView\SplashPage.xaml.cs">
+      <DependentUpon>SplashPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LongStoryPage.xaml.cs">
+      <DependentUpon>LongStoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\StoryBookPage.xaml.cs">
+      <DependentUpon>StoryBookPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\YuriPage.cs" />
+    <Compile Include="PlatformCore\Audio\MusicianBass.cs" />
+    <Compile Include="PlatformCore\Audio\MusicianDescriptor.cs" />
+    <Compile Include="PlatformCore\Audio\MusicianRouterHandler.cs" />
+    <Compile Include="PlatformCore\Audio\NAudioChannelPlayer.cs" />
+    <Compile Include="PlatformCore\BacklogHolder.cs" />
+    <Compile Include="PlatformCore\Director.cs" />
+    <Compile Include="PlatformCore\Evaluator\IEvaluator.cs" />
+    <Compile Include="PlatformCore\Graphic3D\ParticleDescriptor3D.cs" />
+    <Compile Include="PlatformCore\Graphic3D\ParticleEmitter3D.cs" />
+    <Compile Include="PlatformCore\Graphic3D\ParticleSystem3D.cs" />
+    <Compile Include="PlatformCore\Graphic3D\ModelDescriptor3D.cs" />
+    <Compile Include="PlatformCore\Net\IYuriHttpServer.cs" />
+    <Compile Include="PlatformCore\Net\YuriFtpClient.cs" />
+    <Compile Include="PlatformCore\Net\YuriHttpClient.cs" />
+    <Compile Include="PlatformCore\Net\HttpServerRouterHandler.cs" />
+    <Compile Include="PlatformCore\Net\YuriHttpServer.cs" />
+    <Compile Include="PlatformCore\Router\RouterManager.cs" />
+    <Compile Include="PlatformCore\Router\YuriRouter.cs" />
+    <Compile Include="PlatformCore\Router\IRouteable.cs" />
+    <Compile Include="PlatformCore\Router\YuriRoutedEvent.cs" />
+    <Compile Include="PlatformCore\Semaphore\SemaphoreDispatcher.cs" />
+    <Compile Include="PlatformCore\Semaphore\SemaphoreHandler.cs" />
+    <Compile Include="PlatformCore\Semaphore\YuriObservable.cs" />
+    <Compile Include="PlatformCore\Semaphore\YuriObserver.cs" />
+    <Compile Include="PlatformCore\Semaphore\YuriSemaphore.cs" />
+    <Compile Include="PlatformCore\VM\ConfigParser.cs" />
+    <Compile Include="PlatformCore\VM\EvaluatableContext.cs" />
+    <Compile Include="PlatformCore\VM\GlobalContextDAO.cs" />
+    <Compile Include="PlatformCore\VM\IRuntimeContext.cs" />
+    <Compile Include="PlatformCore\VM\PersistContext.cs" />
+    <Compile Include="PlatformCore\VM\SaveableContext.cs" />
+    <Compile Include="PlatformCore\VM\SceneContextDAO.cs" />
+    <Compile Include="PlatformCore\VM\SimpleContext.cs" />
+    <Compile Include="Tests\EvaluatorTest.cs" />
+    <Compile Include="Utils\CommonUtils.cs" />
+    <Compile Include="Utils\EncryptUtils.cs" />
+    <Compile Include="PageView\Stage3D.xaml.cs">
+      <DependentUpon>Stage3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlatformCore\Audio\NAudioPlayer.cs" />
+    <Compile Include="PlatformCore\NotificationManager.cs" />
+    <Compile Include="PlatformCore\VM\CloneableDescriptor.cs" />
+    <Compile Include="PlatformCore\VM\PersistContextDAO.cs" />
+    <Compile Include="PlatformCore\Evaluator\PolishEvaluator.cs" />
+    <Compile Include="PlatformCore\VM\ResourceCachePool.cs" />
+    <Compile Include="PlatformCore\RollbackManager.cs" />
+    <Compile Include="PlatformCore\Graphic\SCamera2D.cs" />
+    <Compile Include="PlatformCore\VM\RollbackableSnapshot.cs" />
+    <Compile Include="PlatformCore\Graphic3D\SCamera3D.cs" />
+    <Compile Include="PlatformCore\Graphic\ViewPageManager.cs" />
+    <Compile Include="PlatformCore\Graphic\Viewport2DDescriptor.cs" />
+    <Compile Include="PlatformCore\YuririWorld.cs" />
+    <Compile Include="PlatformCore\Graphic\Viewport2D.cs" />
+    <Compile Include="PageView\Stage2D.xaml.cs">
+      <DependentUpon>Stage2D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\LogUtils.cs" />
+    <Compile Include="Utils\IOUtils.cs" />
+    <Compile Include="Utils\PackageUtils.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlatformCore\VM\ILConvertor.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlatformCore\Graphic\BranchButton.cs" />
+    <Compile Include="PlatformCore\Graphic\BranchButtonDescriptor.cs" />
+    <Compile Include="PlatformCore\GlobalConfigContext.cs" />
+    <Compile Include="PlatformCore\VM\Interrupt.cs" />
+    <Compile Include="PlatformCore\Graphic\MessageLayer.cs" />
+    <Compile Include="PlatformCore\Graphic\MessageLayerDescriptor.cs" />
+    <Compile Include="PlatformCore\Audio\Musician.cs" />
+    <Compile Include="PlatformCore\Evaluator\PolishItem.cs" />
+    <Compile Include="PlatformCore\ResourceManager.cs" />
+    <Compile Include="PlatformCore\RuntimeManager.cs" />
+    <Compile Include="PlatformCore\Graphic\ScreenManager.cs" />
+    <Compile Include="PlatformCore\Graphic\SpriteAnimation.cs" />
+    <Compile Include="PlatformCore\Graphic\SpriteButton.cs" />
+    <Compile Include="PlatformCore\Graphic\SpriteButtonDescriptor.cs" />
+    <Compile Include="PlatformCore\Graphic\SpriteDescriptor.cs" />
+    <Compile Include="PlatformCore\VM\StackMachine.cs" />
+    <Compile Include="PlatformCore\VM\StackMachineFrame.cs" />
+    <Compile Include="PlatformCore\VM\SymbolTable.cs" />
+    <Compile Include="PlatformCore\UpdateRender.cs" />
+    <Compile Include="PlatformCore\Graphic\ViewManager.cs" />
+    <Compile Include="PlatformCore\Graphic\YuriSprite.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </Compile>
+    <None Include="app.config" />
+    <Compile Include="PlatformCore\VM\ForkableState.cs" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YuriInterpreter\YuriInterpreter.csproj">
+      <Project>{6194a2aa-1c9d-40cd-8c8f-ea66f679cc0f}</Project>
+      <Name>YuriInterpreter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yuriri\Yuriri.csproj">
+      <Project>{2ce410d4-7eb7-473e-acc8-6ef39038188e}</Project>
+      <Name>Yuriri</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\packages\IronPython.2.7.7\lib\Net40\IronPython.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\packages\IronPython.2.7.7\lib\Net40\IronPython.Modules.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\packages\IronPython.2.7.7\lib\Net40\IronPython.SQLite.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\packages\IronPython.2.7.7\lib\Net40\IronPython.Wpf.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\packages\log4net.2.0.12\lib\net40\log4net.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\packages\DynamicLanguageRuntime.1.1.2\lib\Net40\Microsoft.Dynamic.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\packages\DynamicLanguageRuntime.1.1.2\lib\Net40\Microsoft.Scripting.AspNet.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\packages\DynamicLanguageRuntime.1.1.2\lib\Net40\Microsoft.Scripting.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\packages\DynamicLanguageRuntime.1.1.2\lib\Net40\Microsoft.Scripting.Metadata.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\NAudio.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\nunit.framework.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\nunit.mocks.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\pnunit.framework.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationFramework.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Configuration.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Web.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\bin\Debug\System.Windows.Interactivity.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\Transitionals.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WindowsBase.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\YuriInterpreter\bin\Debug\Yuri.YuriInterpreter.dll" />
+    <ReferencePath Include="F:\Misrepresent_Love\MisrepresentLove\Yuriri\bin\Debug\Yuri.Yuriri.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\MainWindow.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\ArtPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\LHEndListPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\LHPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\LHSaveLoadPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\LHSettingsPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\LHStartPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\MessagePage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\MusicPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\SplashPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\Stage3D.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\Stage2D.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\LongStoryPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\PageView\StoryBookPage.g.cs" />
+    <Compile Include="F:\Misrepresent_Love\MisrepresentLove\YuriPlatform\obj\Debug\App.g.cs" />
+  </ItemGroup>
+</Project>

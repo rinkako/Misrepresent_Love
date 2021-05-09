@@ -1,0 +1,222 @@
+﻿<Page x:Class="Yuri.PageView.LHSettingsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Yuri.PageView"
+      mc:Ignorable="d" d:DesignHeight="1080" d:DesignWidth="1920" Title="LHSettingsPage">
+    <Canvas Name="Canvas_SettingsRoot">
+        <Grid Name="Grid_TabHolder" Height="170" VerticalAlignment="Top">
+            <Image Name="TabImage_Graphic" HorizontalAlignment="Left" Margin="1175,35,0,0" VerticalAlignment="Top" Width="224" Height="109" Source="/Yuri;component/Resources/Settings_Tab_Graphic_Select.png" MouseDown="Image_MouseDown"/>
+            <Image Name="TabImage_Voice" HorizontalAlignment="Left" Margin="1425,35,0,0" VerticalAlignment="Top" Width="224" Height="109" Source="/Yuri;component/Resources/Settings_Tab_Voice.png" MouseDown="Image_MouseDown"/>
+            <Image Name="TabImage_Keyboard" HorizontalAlignment="Left" Margin="1425,35,0,0" VerticalAlignment="Top" Width="224" Height="109" Source="/Yuri;component/Resources/Settings_Tab_Keyboard.png" MouseDown="Image_MouseDown" Visibility="Hidden"/>
+            <Image Name="TabImage_Others" HorizontalAlignment="Left" Margin="1675,35,0,0" VerticalAlignment="Top" Width="224" Height="109" Source="/Yuri;component/Resources/Settings_Tab_Others.png" MouseDown="Image_MouseDown"/>
+        </Grid>
+        <Grid Name="Grid_Tab_Graphic" Canvas.Top="175" Width="1920" Height="905" Canvas.Left="0" Visibility="Visible">
+            <Grid Margin="0,80,800,0" HorizontalAlignment="Right" Width="740" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="屏幕模式" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Name="LabelRadio_Grahpic_Screen_Full" Content="全屏幕" Margin="180,119,431,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Screen_MouseDown"/>
+                <Label Name="LabelRadio_Grahpic_Screen_Win" Content="缩放窗口" Margin="431,119,180,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Screen_MouseDown"/>
+            </Grid>
+            <Grid Margin="0,80,20,0" HorizontalAlignment="Right" Width="739" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="自动阅读速度" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Name="LabelRadio_Grahpic_Auto_1" Content="很慢" Margin="60,119,551,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Auto_MouseDown"/>
+                <Label Name="LabelRadio_Grahpic_Auto_2" Content="慢" Margin="180,119,431,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Auto_MouseDown"/>
+                <Label Name="LabelRadio_Grahpic_Auto_3" Content="通常" Margin="307,119,304,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Auto_MouseDown"/>
+                <Label Name="LabelRadio_Grahpic_Auto_4" Content="快" Margin="431,119,180,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Auto_MouseDown"/>
+                <Label Name="LabelRadio_Grahpic_Auto_5" Content="很快" Margin="551,119,60,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Auto_MouseDown"/>
+            </Grid>
+            <Grid Margin="0,330,800,0" HorizontalAlignment="Right" Width="740" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="字体" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Name="Label_FontName" Content="（默认）Source Han Serif" HorizontalContentAlignment="Left" Margin="57,114,262,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49"/>
+                <Image Name="Image_Btn_SetFont" Height="66" Canvas.Left="44" Canvas.Top="960" Width="111" Source="/Yuri;component/Resources/Settings_Btn_SetFont.png" MouseEnter="Warp_Btn_MouseEnter" MouseLeave="Warp_Btn_MouseLeave" Margin="589,105,40,74" MouseDown="Image_Btn_SetFont_MouseDown"/>
+                <Image Name="Image_Btn_DefaultFont" Height="66" Width="111" Source="/Yuri;component/Resources/Settings_Btn_DefaultFont.png" MouseEnter="Warp_Btn_MouseEnter" MouseLeave="Warp_Btn_MouseLeave" Margin="478,105,151,74" MouseDown="Image_Btn_DefaultFont_MouseDown"/>
+            </Grid>
+            <Grid Margin="0,330,20,0" HorizontalAlignment="Right" Width="739" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="文字打印速度" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Name="LabelRadio_Grahpic_Typing_1" Content="很慢" Margin="60,119,551,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Typing_MouseDown"/>
+                <Label Name="LabelRadio_Grahpic_Typing_2" Content="慢" Margin="180,119,431,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Typing_MouseDown"/>
+                <Label Name="LabelRadio_Grahpic_Typing_3" Content="通常" Margin="307,119,304,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Typing_MouseDown"/>
+                <Label Name="LabelRadio_Grahpic_Typing_4" Content="快" Margin="431,119,180,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Typing_MouseDown"/>
+                <Label Name="LabelRadio_Grahpic_Typing_5" Content="很快" Margin="551,119,60,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Grahpic_Typing_MouseDown"/>
+            </Grid>
+        </Grid>
+        <Grid Name="Grid_Tab_Voice" Canvas.Top="175" Width="1920" Height="905" Canvas.Left="0" Visibility="Hidden">
+            <Grid Margin="0,80,800,0" HorizontalAlignment="Right" Width="740" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="背景音乐" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Grid Name="RecGroup_BGM">
+                    <Rectangle Name="Rec_BGM_1" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="77,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_2" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="107,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_3" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="137,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_4" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="167,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_5" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="197,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_6" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="227,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_7" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="257,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_8" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="287,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_9" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="317,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_10" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="347,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_11" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="377,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_12" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="407,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_13" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="437,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_14" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="467,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_15" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="497,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_16" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="527,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_17" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="557,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_18" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="587,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_19" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="617,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_BGM_20" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="647,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                </Grid>
+            </Grid>
+            <Grid Margin="0,330,800,0" HorizontalAlignment="Right" Width="740" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="声效" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Grid Name="RecGroup_SE">
+                    <Rectangle Name="Rec_SE_1" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="77,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_2" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="107,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_3" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="137,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_4" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="167,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_5" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="197,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_6" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="227,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_7" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="257,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_8" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="287,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_9" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="317,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_10" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="347,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_11" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="377,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_12" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="407,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_13" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="437,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_14" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="467,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_15" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="497,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_16" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="527,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_17" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="557,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_18" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="587,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_19" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="617,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_SE_20" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="647,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                </Grid>
+            </Grid>
+            <Grid Margin="0,580,800,0" HorizontalAlignment="Right" Width="740" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="语音" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Grid Name="RecGroup_Voice">
+                    <Rectangle Name="Rec_VOICE_1" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="77,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_2" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="107,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_3" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="137,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_4" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="167,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_5" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="197,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_6" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="227,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_7" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="257,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_8" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="287,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_9" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="317,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_10" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="347,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_11" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="377,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_12" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="407,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_13" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="437,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_14" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="467,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_15" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="497,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_16" Fill="#FF81B3FF" HorizontalAlignment="Left" Height="70" Margin="527,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_17" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="557,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_18" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="587,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_19" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="617,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                    <Rectangle Name="Rec_VOICE_20" Fill="#FFDEDEDE" HorizontalAlignment="Left" Height="70" Margin="647,100,0,0" VerticalAlignment="Top" Width="20" MouseDown="Rec_MouseDown"/>
+                </Grid>
+            </Grid>
+            <Image Name="Chara_VOICE_XW" HorizontalAlignment="Left" Height="727" Margin="1170,80,0,0" VerticalAlignment="Top" Width="364" Source="/Yuri;component/Resources/Settings_Voice_XW_On.png" MouseDown="Chara_VOICE_MouseDown"/>
+            <Image Name="Chara_VOICE_QL" HorizontalAlignment="Left" Height="727" Margin="1534,80,0,0" VerticalAlignment="Top" Width="364" Source="/Yuri;component/Resources/Settings_Voice_QL_On.png" MouseDown="Chara_VOICE_MouseDown"/>
+        </Grid>
+        <Grid Name="Grid_Tab_Keyboard" Canvas.Top="175" Width="1920" Height="905" Canvas.Left="0" Visibility="Hidden"/>
+        <Grid Name="Grid_Tab_Others" Canvas.Top="175" Width="1920" Height="905" Canvas.Left="0" Visibility="Hidden">
+            <Grid Margin="0,80,800,0" HorizontalAlignment="Right" Width="740" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="标题画面" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Name="LabelRadio_Others_Title_Timing" Content="自动变化" Margin="162,119,413,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Others_Title_MouseDown"/>
+                <Label Name="LabelRadio_Others_Title_Dusk" Content="总是暮色" Margin="441,119,170,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Others_Title_MouseDown"/>
+            </Grid>
+            <Grid Margin="0,330,800,0" HorizontalAlignment="Right" Width="740" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="鼠标向上回滚" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Name="LabelRadio_Others_Rollback_Enable" Content="整个世界时钟" Margin="156,119,401,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Others_Rollback_MouseDown"/>
+                <Label Name="LabelRadio_Others_Rollback_Disable" Content="禁用" Margin="441,119,170,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Others_Rollback_MouseDown"/>
+            </Grid>
+            <Grid Margin="0,580,800,0" HorizontalAlignment="Right" Width="740" Height="245" VerticalAlignment="Top">
+                <Image VerticalAlignment="Top" Height="224" Source="/Yuri;component/Resources/Settings_UI_TermPanel.png" HorizontalAlignment="Right" Width="736"/>
+                <Label Content="特效" HorizontalContentAlignment="Center" Margin="24,19,499,0" VerticalAlignment="Top" FontSize="28" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Height="49">
+                    <Label.Foreground>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black" Offset="0"/>
+                            <GradientStop Color="#FF818181" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Label.Foreground>
+                </Label>
+                <Label Name="LabelRadio_Others_Performance_Enable" Content="启用" Margin="156,119,401,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Others_Performance_MouseDown"/>
+                <Label Name="LabelRadio_Others_Performance_Disable" Content="尽可能少" Margin="441,119,170,0" HorizontalContentAlignment="Center" VerticalAlignment="Top" FontSize="26" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseDown="LabelRadio_Others_Performance_MouseDown"/>
+            </Grid>
+        </Grid>
+    </Canvas>
+</Page>

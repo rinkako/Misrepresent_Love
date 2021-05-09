@@ -1,0 +1,63 @@
+﻿<Page x:Class="Yuri.PageView.LHPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Yuri.PageView"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920" PreviewMouseRightButtonUp="Page_PreviewMouseRightButtonUp" Background="Transparent">
+    <Canvas Name="Grid_StoryBook">
+
+        <Rectangle Name="Image_WhiteSpan" Fill="#D8FFFFFF" Height="1080" Canvas.Left="1920" Width="1920" IsHitTestVisible="False"/>
+        <Image Name="Image_Panel" Height="1080" Width="317" Source="/Yuri;component/Resources/Rclick_Panel.png" Canvas.Left="1920"/>
+        <Image Name="Image_NameLogo" Opacity="0" Height="120" Width="500" Canvas.Left="1420" Canvas.Top="960" IsHitTestVisible="False" Source="/Yuri;component/Resources/Rclick_Logo.png"/>
+
+        <Canvas Name="CanvsGroup_Root" Height="1080" Width="1920">
+
+            <Canvas Name="Canvas_RightButtonGroups" Height="1080" Width="229" Canvas.Top="25" Canvas.Left="1691" Opacity="0">
+                <Image Name="Image_Button_Save" Height="66" Canvas.Left="0" Canvas.Top="110" Width="229" Source="/Yuri;component/Resources/Rclick_Out_Btn_Save.png" MouseEnter="Image_Button_Outer_MouseEnter" MouseLeave="Image_Button_Outer_MouseLeave" MouseLeftButtonUp="Image_Button_Save_MouseLeftButtonUp"/>
+                <Image Name="Image_Button_Load" Height="66" Canvas.Left="0" Canvas.Top="201" Width="229" Source="/Yuri;component/Resources/Rclick_Out_Btn_Load.png" MouseEnter="Image_Button_Outer_MouseEnter" MouseLeave="Image_Button_Outer_MouseLeave" MouseLeftButtonUp="Image_Button_Load_MouseLeftButtonUp"/>
+                <Image Name="Image_Button_Auto" Height="66" Canvas.Left="0" Canvas.Top="292" Width="229" Source="/Yuri;component/Resources/Rclick_Out_Btn_Auto.png" MouseEnter="Image_Button_Outer_MouseEnter" MouseLeave="Image_Button_Outer_MouseLeave" MouseLeftButtonUp="Image_Button_Auto_MouseLeftButtonUp"/>
+                <Image Name="Image_Button_Backlog" Height="66" Canvas.Left="0" Canvas.Top="383" Width="229" Source="/Yuri;component/Resources/Rclick_Out_Btn_Backlog.png" MouseEnter="Image_Button_Outer_MouseEnter" MouseLeave="Image_Button_Outer_MouseLeave" MouseLeftButtonUp="Image_Button_Backlog_MouseLeftButtonUp"/>
+                <Image Name="Image_Button_Settings" Height="66" Canvas.Left="0" Canvas.Top="474" Width="229" Source="/Yuri;component/Resources/Rclick_Out_Btn_Settings.png" MouseEnter="Image_Button_Outer_MouseEnter" MouseLeave="Image_Button_Outer_MouseLeave" MouseLeftButtonUp="Image_Button_Settings_MouseLeftButtonUp"/>
+                <Image Name="Image_Button_Title" Height="66" Canvas.Left="0" Canvas.Top="766" Width="229" Source="/Yuri;component/Resources/Rclick_Out_Btn_Title.png" MouseEnter="Image_Button_Outer_MouseEnter" MouseLeave="Image_Button_Outer_MouseLeave" MouseLeftButtonUp="Image_Button_Title_MouseLeftButtonUp"/>
+            </Canvas>
+
+            <Canvas Name="Canvas_EpHinter" Height="220" Width="1910" Canvas.Top="860" IsHitTestVisible="False" Opacity="0">
+                <Label Name="Label_Hint_Episode" Content="Episode 4-2" Canvas.Left="44" Canvas.Top="20" Height="109" Width="912" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Foreground="White" FontSize="50">
+                    <Label.Effect>
+                        <DropShadowEffect BlurRadius="10" Direction="270" ShadowDepth="3"/>
+                    </Label.Effect>
+                </Label>
+                <Label Name="Label_Hint_EpName" Content="章节标题" Canvas.Left="120" Canvas.Top="80" Height="109" Width="1672" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Foreground="White" FontSize="64">
+                    <Label.Effect>
+                        <DropShadowEffect BlurRadius="10" Direction="270" ShadowDepth="3"/>
+                    </Label.Effect>
+                </Label>
+            </Canvas>
+
+        </Canvas>
+
+        <Canvas Name="CanvsGroup_Backlog" Height="1080" Width="1920">
+            <ScrollViewer Name="Scroll_BacklogBoxing" Canvas.Left="100" Canvas.Top="124" Height="800" Width="1040" HorizontalScrollBarVisibility="Hidden" Opacity="0">
+                <ScrollViewer.Content>
+                    <StackPanel Name="StackPanel_Backlog_MainStack" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                </ScrollViewer.Content>
+            </ScrollViewer>
+        </Canvas>
+
+        <Image Name="Image_SubTitle" Width="534" Height="120" Opacity="0"/>
+        <Image Name="Image_Button_Back" Height="66" Canvas.Left="44" Canvas.Top="960" Width="229" Source="/Yuri;component/Resources/Rclick_Out_Btn_Back.png" MouseEnter="Image_Button_Outer_MouseEnter" MouseLeave="Image_Button_Outer_MouseLeave" Opacity="0" MouseDown="Image_Button_Back_MouseDown"/>
+
+        <Canvas Name="CanvasGroup_EnsureMask" Height="1080" Width="1920" Background="#E5000000" Visibility="Hidden">
+            <Label Name="Label_Masking" Content="确实要返回标题画面吗" Height="85" Width="1920" HorizontalContentAlignment="Center" FontSize="48" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" Foreground="White" Canvas.Top="421"/>
+            <Image Name="Image_Button_No" Height="66" Canvas.Left="656" Canvas.Top="550" Width="229" Source="/Yuri;component/Resources/Rclick_Btn_No.png" MouseEnter="Image_Button_Mask_MouseEnter" MouseLeave="Image_Button_Mask_MouseLeave" MouseLeftButtonUp="Image_Button_No_MouseLeftButtonUp"/>
+            <Image Name="Image_Button_Yes" Height="66" Canvas.Left="1028" Canvas.Top="550" Width="229" Source="/Yuri;component/Resources/Rclick_Btn_Yes.png" MouseEnter="Image_Button_Mask_MouseEnter" MouseLeave="Image_Button_Mask_MouseLeave" MouseLeftButtonUp="Image_Button_Yes_MouseLeftButtonUp"/>
+            <Rectangle Fill="#FFF4F4F5" Height="5" Canvas.Left="360" Stroke="Black" Canvas.Top="502" Width="1200"/>
+        </Canvas>
+        
+        <Frame x:Name="Frame_SaveLoad" Height="1080" Width="1920" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Hidden" Canvas.Left="0" Canvas.Top="0" Visibility="Hidden" ClipToBounds="True"/>
+        <Frame x:Name="Frame_Settings" Height="1080" Width="1920" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" NavigationUIVisibility="Hidden" Canvas.Left="0" Canvas.Top="0" Visibility="Hidden" ClipToBounds="True"/>
+
+    </Canvas>
+</Page>

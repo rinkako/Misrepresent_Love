@@ -1,0 +1,42 @@
+﻿<Page x:Class="Yuri.PageView.LHEndListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Yuri.PageView"
+      mc:Ignorable="d" d:DesignHeight="1080" d:DesignWidth="1920" Title="LHEndListPage">
+    <Canvas Name="Canvas_EndListPage" Background="WhiteSmoke">
+
+        <Image Name="Image_SubTitle" Width="534" Height="120" Source="/Yuri;component/Resources/Rclick_SubTitle_EndList.png"/>
+        <Image Name="Image_Button_Back" Height="66" Canvas.Left="44" Canvas.Top="960" Width="229" Source="/Yuri;component/Resources/Rclick_Out_Btn_Back.png"/>
+
+        <Image Name="Image_EndGraph" Height="1080" Canvas.Left="920" Width="1000"/>
+
+        <Label Content="Label&#xD;&#xA;Message at line 2" Canvas.Left="1086" Canvas.Top="903" Height="165" Width="798" FontSize="48" HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold"/>
+
+        <Canvas Height="750" Width="720">
+            <TextBlock Name="TextBlock_End_1" Canvas.Left="120" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="273" Width="578" Height="75" FontSize="36" TextAlignment="Center" Padding="30,10,10,0" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseEnter="TextBlock_EndItem_MouseEnter" MouseLeave="TextBlock_EndItem_MouseLeave">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="/Yuri;component/Resources/Main_EndList_LineItem.png"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="TextBlock_End_2" Canvas.Left="120" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="393" Width="578" Height="75" FontSize="36" TextAlignment="Center" Padding="30,10,10,0" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseEnter="TextBlock_EndItem_MouseEnter" MouseLeave="TextBlock_EndItem_MouseLeave">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="/Yuri;component/Resources/Main_EndList_LineItem.png"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="TextBlock_End_3" Canvas.Left="120" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="513" Width="578" Height="75" FontSize="36" TextAlignment="Center" Padding="30,10,10,0" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseEnter="TextBlock_EndItem_MouseEnter" MouseLeave="TextBlock_EndItem_MouseLeave">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="/Yuri;component/Resources/Main_EndList_LineItem.png"/>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="TextBlock_End_4" Canvas.Left="120" TextWrapping="Wrap" Text="TextBlock" Canvas.Top="633" Width="578" Height="75" FontSize="36" TextAlignment="Center" Padding="30,10,10,0" FontFamily="/Yuri;component/Resources/#Source Han Serif CN SemiBold" MouseEnter="TextBlock_EndItem_MouseEnter" MouseLeave="TextBlock_EndItem_MouseLeave">
+                <TextBlock.Background>
+                    <ImageBrush ImageSource="/Yuri;component/Resources/Main_EndList_LineItem.png"/>
+                </TextBlock.Background>
+            </TextBlock>
+        </Canvas>
+
+
+    </Canvas>
+</Page>

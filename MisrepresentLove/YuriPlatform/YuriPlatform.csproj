@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D513CF82-CCCE-4D15-8F34-D17663C26FA7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Yuri</RootNamespace>
+    <AssemblyName>Yuri</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\Yuri.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="IronPython, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.7\lib\Net40\IronPython.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Modules, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.7\lib\Net40\IronPython.Modules.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.SQLite, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.7\lib\Net40\IronPython.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="IronPython.Wpf, Version=2.7.7.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPython.2.7.7\lib\Net40\IronPython.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.12\lib\net40\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Dynamic, Version=1.1.2.22, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.1.2\lib\Net40\Microsoft.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting, Version=1.1.2.22, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.1.2\lib\Net40\Microsoft.Scripting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.AspNet, Version=1.1.1.21, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.1.2\lib\Net40\Microsoft.Scripting.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Scripting.Metadata, Version=1.1.2.22, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\DynamicLanguageRuntime.1.1.2\lib\Net40\Microsoft.Scripting.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.10.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>.\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks">
+      <HintPath>.\nunit.mocks.dll</HintPath>
+    </Reference>
+    <Reference Include="pnunit.framework">
+      <HintPath>.\pnunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.4.3\lib\net40\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Transitionals">
+      <HintPath>.\Transitionals.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="PageView\ILoadablePage.cs" />
+    <Compile Include="PageView\LHEndListPage.xaml.cs">
+      <DependentUpon>LHEndListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LHPage.xaml.cs">
+      <DependentUpon>LHPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LHSaveLoadPage.xaml.cs">
+      <DependentUpon>LHSaveLoadPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LHSettingsPage.xaml.cs">
+      <DependentUpon>LHSettingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LHStartPage.xaml.cs">
+      <DependentUpon>LHStartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\RenderablePage.cs" />
+    <Compile Include="PageView\SplashPage.xaml.cs">
+      <DependentUpon>SplashPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\LongStoryPage.xaml.cs">
+      <DependentUpon>LongStoryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageView\YuriPage.cs" />
+    <Compile Include="PlatformCore\Audio\MusicianBass.cs" />
+    <Compile Include="PlatformCore\Audio\MusicianDescriptor.cs" />
+    <Compile Include="PlatformCore\Audio\MusicianRouterHandler.cs" />
+    <Compile Include="PlatformCore\Audio\NAudioChannelPlayer.cs" />
+    <Compile Include="PlatformCore\BacklogHolder.cs" />
+    <Compile Include="PlatformCore\Director.cs" />
+    <Compile Include="PlatformCore\Evaluator\IEvaluator.cs" />
+    <Compile Include="PlatformCore\Graphic3D\ParticleDescriptor3D.cs" />
+    <Compile Include="PlatformCore\Graphic3D\ParticleEmitter3D.cs" />
+    <Compile Include="PlatformCore\Graphic3D\ParticleSystem3D.cs" />
+    <Compile Include="PlatformCore\Graphic3D\ModelDescriptor3D.cs" />
+    <Compile Include="PlatformCore\Net\IYuriHttpServer.cs" />
+    <Compile Include="PlatformCore\Net\YuriFtpClient.cs" />
+    <Compile Include="PlatformCore\Net\YuriHttpClient.cs" />
+    <Compile Include="PlatformCore\Net\HttpServerRouterHandler.cs" />
+    <Compile Include="PlatformCore\Net\YuriHttpServer.cs" />
+    <Compile Include="PlatformCore\Router\RouterManager.cs" />
+    <Compile Include="PlatformCore\Router\YuriRouter.cs" />
+    <Compile Include="PlatformCore\Router\IRouteable.cs" />
+    <Compile Include="PlatformCore\Router\YuriRoutedEvent.cs" />
+    <Compile Include="PlatformCore\Semaphore\SemaphoreDispatcher.cs" />
+    <Compile Include="PlatformCore\Semaphore\SemaphoreHandler.cs" />
+    <Compile Include="PlatformCore\Semaphore\YuriObservable.cs" />
+    <Compile Include="PlatformCore\Semaphore\YuriObserver.cs" />
+    <Compile Include="PlatformCore\Semaphore\YuriSemaphore.cs" />
+    <Compile Include="PlatformCore\VM\ConfigParser.cs" />
+    <Compile Include="PlatformCore\VM\EvaluatableContext.cs" />
+    <Compile Include="PlatformCore\VM\GlobalContextDAO.cs" />
+    <Compile Include="PlatformCore\VM\IRuntimeContext.cs" />
+    <Compile Include="PlatformCore\VM\PersistContext.cs" />
+    <Compile Include="PlatformCore\VM\SaveableContext.cs" />
+    <Compile Include="PlatformCore\VM\SceneContextDAO.cs" />
+    <Compile Include="PlatformCore\VM\SimpleContext.cs" />
+    <Compile Include="Tests\EvaluatorTest.cs" />
+    <Compile Include="Utils\CommonUtils.cs" />
+    <Compile Include="Utils\EncryptUtils.cs" />
+    <Compile Include="PageView\Stage3D.xaml.cs">
+      <DependentUpon>Stage3D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlatformCore\Audio\NAudioPlayer.cs" />
+    <Compile Include="PlatformCore\NotificationManager.cs" />
+    <Compile Include="PlatformCore\VM\CloneableDescriptor.cs" />
+    <Compile Include="PlatformCore\VM\PersistContextDAO.cs" />
+    <Compile Include="PlatformCore\Evaluator\PolishEvaluator.cs" />
+    <Compile Include="PlatformCore\VM\ResourceCachePool.cs" />
+    <Compile Include="PlatformCore\RollbackManager.cs" />
+    <Compile Include="PlatformCore\Graphic\SCamera2D.cs" />
+    <Compile Include="PlatformCore\VM\RollbackableSnapshot.cs" />
+    <Compile Include="PlatformCore\Graphic3D\SCamera3D.cs" />
+    <Compile Include="PlatformCore\Graphic\ViewPageManager.cs" />
+    <Compile Include="PlatformCore\Graphic\Viewport2DDescriptor.cs" />
+    <Compile Include="PlatformCore\YuririWorld.cs" />
+    <Compile Include="PlatformCore\Graphic\Viewport2D.cs" />
+    <Compile Include="PageView\Stage2D.xaml.cs">
+      <DependentUpon>Stage2D.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\LogUtils.cs" />
+    <Compile Include="Utils\IOUtils.cs" />
+    <Compile Include="Utils\PackageUtils.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PlatformCore\VM\ILConvertor.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PageView\LHEndListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\LHPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\LHSaveLoadPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\LHSettingsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\LHStartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\SplashPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\Stage3D.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\Stage2D.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageView\LongStoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PlatformCore\Graphic\BranchButton.cs" />
+    <Compile Include="PlatformCore\Graphic\BranchButtonDescriptor.cs" />
+    <Compile Include="PlatformCore\GlobalConfigContext.cs" />
+    <Compile Include="PlatformCore\VM\Interrupt.cs" />
+    <Compile Include="PlatformCore\Graphic\MessageLayer.cs" />
+    <Compile Include="PlatformCore\Graphic\MessageLayerDescriptor.cs" />
+    <Compile Include="PlatformCore\Audio\Musician.cs" />
+    <Compile Include="PlatformCore\Evaluator\PolishItem.cs" />
+    <Compile Include="PlatformCore\ResourceManager.cs" />
+    <Compile Include="PlatformCore\RuntimeManager.cs" />
+    <Compile Include="PlatformCore\Graphic\ScreenManager.cs" />
+    <Compile Include="PlatformCore\Graphic\SpriteAnimation.cs" />
+    <Compile Include="PlatformCore\Graphic\SpriteButton.cs" />
+    <Compile Include="PlatformCore\Graphic\SpriteButtonDescriptor.cs" />
+    <Compile Include="PlatformCore\Graphic\SpriteDescriptor.cs" />
+    <Compile Include="PlatformCore\VM\StackMachine.cs" />
+    <Compile Include="PlatformCore\VM\StackMachineFrame.cs" />
+    <Compile Include="PlatformCore\VM\SymbolTable.cs" />
+    <Compile Include="PlatformCore\UpdateRender.cs" />
+    <Compile Include="PlatformCore\Graphic\ViewManager.cs" />
+    <Compile Include="PlatformCore\Graphic\YuriSprite.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </Compile>
+    <None Include="app.config" />
+    <Compile Include="PlatformCore\VM\ForkableState.cs" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Resources\SourceHanSerifCN-SemiBold.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YuriInterpreter\YuriInterpreter.csproj">
+      <Project>{6194a2aa-1c9d-40cd-8c8f-ea66f679cc0f}</Project>
+      <Name>YuriInterpreter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Yuriri\Yuriri.csproj">
+      <Project>{2ce410d4-7eb7-473e-acc8-6ef39038188e}</Project>
+      <Name>Yuriri</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PlatformIco128.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Rclick_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Rclick_Panel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Rclick_Out_Btn_Auto.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Auto_Select.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Back.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Backlog.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Backlog_Select.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Back_Select.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Branch.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Branch_Select.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Linking.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Linking_Select.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Load.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Load_Select.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Save.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Save_Select.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Settings.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Settings_Select.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Title.png" />
+    <Resource Include="Resources\Rclick_Out_Btn_Title_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Rclick_SaveLoadPage_LineItem.png" />
+    <Resource Include="Resources\Rclick_SaveLoadPage_LineItem_Select.png" />
+    <Resource Include="Resources\Rclick_SaveLoadPage_PageItem.png" />
+    <Resource Include="Resources\Rclick_SaveLoadPage_PageItem_Select.png" />
+    <Resource Include="Resources\Rclick_SaveLoadPage_SnapshotPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Rclick_Btn_Cancel.png" />
+    <Resource Include="Resources\Rclick_Btn_Cancel_Select.png" />
+    <Resource Include="Resources\Rclick_Btn_No.png" />
+    <Resource Include="Resources\Rclick_Btn_No_Select.png" />
+    <Resource Include="Resources\Rclick_Btn_OK.png" />
+    <Resource Include="Resources\Rclick_Btn_OK_Select.png" />
+    <Resource Include="Resources\Rclick_Btn_Yes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Rclick_Btn_Yes_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Main_EndList_LineItem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Rclick_SubTitle_Backlog.png" />
+    <Resource Include="Resources\Rclick_SubTitle_Emotion.png" />
+    <Resource Include="Resources\Rclick_SubTitle_Graph.png" />
+    <Resource Include="Resources\Rclick_SubTitle_Load.png" />
+    <Resource Include="Resources\Rclick_SubTitle_Save.png" />
+    <Resource Include="Resources\Rclick_SubTitle_Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Rclick_SubTitle_EndList.png" />
+    <Resource Include="Resources\Rclick_SubTitle_Gallery.png" />
+    <Resource Include="Resources\Rclick_SubTitle_Music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Groud_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Groud_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Ground_T1_fore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Ground_T1_bg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Ground_T1_bg2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Btn_Exit.png" />
+    <Resource Include="Resources\Title_Btn_Exit_Select.png" />
+    <Resource Include="Resources\Title_Btn_Gallery.png" />
+    <Resource Include="Resources\Title_Btn_Gallery_Select.png" />
+    <Resource Include="Resources\Title_Btn_Load.png" />
+    <Resource Include="Resources\Title_Btn_Load_Select.png" />
+    <Resource Include="Resources\Title_Btn_Settings.png" />
+    <Resource Include="Resources\Title_Btn_Settings_Select.png" />
+    <Resource Include="Resources\Title_Btn_Start.png" />
+    <Resource Include="Resources\Title_Btn_Start_Select.png" />
+    <Resource Include="Resources\Title_Logo_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_UI_Load_Ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Ground_T1_bg1_sunset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_UI_Settings_Ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Settings_Tab_Graphic.png" />
+    <Resource Include="Resources\Settings_Tab_Graphic_Select.png" />
+    <Resource Include="Resources\Settings_Tab_Keyboard.png" />
+    <Resource Include="Resources\Settings_Tab_Keyboard_Select.png" />
+    <Resource Include="Resources\Settings_Tab_Others.png" />
+    <Resource Include="Resources\Settings_Tab_Others_Select.png" />
+    <Resource Include="Resources\Settings_Tab_Voice.png" />
+    <Resource Include="Resources\Settings_Tab_Voice_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Settings_UI_TermPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Common_Btn_Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Common_Btn_Settings_NoShadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Settings_Voice_XW_Off.png" />
+    <Resource Include="Resources\Settings_Voice_XW_On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Settings_Btn_DefaultFont.png" />
+    <Resource Include="Resources\Settings_Btn_DefaultFont_Select.png" />
+    <Resource Include="Resources\Settings_Btn_SetFont.png" />
+    <Resource Include="Resources\Settings_Btn_SetFont_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Settings_Voice_QL_Off.png" />
+    <Resource Include="Resources\Settings_Voice_QL_On.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Gallery_Btn_Art.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_Art_Select.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_Back.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_Back_Select.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_Bonus_Select.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_EDCard.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_EDCard_Select.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_Music.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_Music_Select.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_Staff.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_Staff_Select.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_StoryTree.png" />
+    <Resource Include="Resources\Title_Gallery_Btn_StoryTree_Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Gallery_Btn_Bonus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Gallery_Staffs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Gallery_EndCard_FoolEnd.png" />
+    <Resource Include="Resources\Title_Gallery_EndCard_NoOpen.png" />
+    <Resource Include="Resources\Title_Gallery_EndCard_TrueEnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Gallery_EndCard_NormalEnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Gallery_EndCard_BadEnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Gallery_Music_ItemPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Gallery_Music_OSTCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Ground_T2_bg2.png" />
+    <Resource Include="Resources\Title_Ground_T2_fore.png" />
+    <Resource Include="Resources\Title_Logo_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\OCG_1_Snapshot.png" />
+    <Resource Include="Resources\OCG_2_Snapshot.png" />
+    <Resource Include="Resources\OCG_3_Snapshot.png" />
+    <Resource Include="Resources\OCG_4_Snapshot.png" />
+    <Resource Include="Resources\OCG_5_Snapshot.png" />
+    <Resource Include="Resources\OCG_6_Snapshot.png" />
+    <Resource Include="Resources\OCG_7_Snapshot.png" />
+    <Resource Include="Resources\OCG_8_Snapshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Ground_TE_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Title_Ground_TE_float.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
